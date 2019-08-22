@@ -10,3 +10,9 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+/app/Http/controllers/MagazineCollectionApiController.php
+/app/Http/Resources/MagazineCollection.php
+/database/seeds/MagazineCollectionTableSeeder.php
+/database/factories/MagazineCollectionFactory.php
+/database/migrations/2019_08_20_132626_magazine_collection_table.php
+/app/MagazineCollection.php

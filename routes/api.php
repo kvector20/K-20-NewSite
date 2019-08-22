@@ -16,3 +16,14 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+// Magazine Routes
+Route::get('magazine','MagazineApiController@index');
+Route::get('magazine/{id}','MagazineApiController@show');
+Route::post('magazine/create','MagazineApiController@store');
+Route::put('magazine/update/{id}','MagazineApiController@update');
+Route::delete('magazine/delete/{id}','MagazineApiController@destroy');
+
+// End Magazine Routes
+
+// Magazine Collection Routes
+//Route::get('collection','MagazineCollectionApiController@index');
