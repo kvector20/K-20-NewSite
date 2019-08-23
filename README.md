@@ -17,23 +17,27 @@ cd FolderName
 ```bash.
 cp .env.example .env
 ```
-### 4- Install composer Dependencies
+### 4- Generate App Encryption Key
+```bash.
+php artisan key:generate
+```
+### 5- Install composer Dependencies
 ```bash.
 composer install
 ```
-### 5-Install npm Dependencies.
+### 6-Install npm Dependencies.
 ```bash.
 npm install
 ```
-### 6- Migrate Database Tables
+### 7- Migrate Database Tables
 ```bash.
 php artisan migrate
 ```
-### 7- Run Database Seeder
+### 8- Run Database Seeder
 ```bash.
 php artisan db:seed
 ```
-### 8- Finally Run The Server
+### 9- Finally Run The Server
 ```bash.
 php artisan serve
 ```
