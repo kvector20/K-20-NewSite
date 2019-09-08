@@ -21,6 +21,8 @@ class MagazineTable extends Migration
             $table->string('author');
             $table->integer('views')->default('0');
             $table->boolean('published')->default('0');
+            $table->string('collection_name');
+            $table->string('collection_month');
             $table->timestamps();
 
         });

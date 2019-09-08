@@ -26,4 +26,8 @@ Route::delete('magazine/delete/{id}','MagazineApiController@destroy');
 // End Magazine Routes
 
 // Magazine Collection Routes
-//Route::get('collection','MagazineCollectionApiController@index');
+/*
+Route::get('collection','MagazineCollectionApiController@index');
+Route::get('collection/{id}','MagazineCollectionApiController@show');
+Route::delete('collection/delete/{id}');
+*/
