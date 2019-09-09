@@ -41,10 +41,12 @@ class MagazineApiController extends Controller
         $Magazine = $request->isMethod('put') ? Magazine::findOrFail
         ($request->id) : new Magazine;
 
-        $Magazine->id = $request->input('id');
+        //$Magazine->id = $request->input('id');
         $Magazine->title = $request->input('title');
         $Magazine->body = $request->input('body');
         $Magazine->author = $request->input('author');
+        $Magazine->collection_name = $request->input('collection_name');
+        $Magazine->collection_month = $request->input('collection_month');
 
         if($Magazine->save())
         {
@@ -105,5 +107,7 @@ class MagazineApiController extends Controller
     {
         $Magazine = Magazine::findOrFail($id);
         $Magazine->delete();
+
+        return new MagazineResource($Magazine);
     }
 }
