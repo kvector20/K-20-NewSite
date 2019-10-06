@@ -13,9 +13,15 @@
         <!-- Styles -->
     </head>
     <body>
+
+
+    <h1>We Coming Soon</h1>
+    <button class="btn btn-danger"> <a href="route('form')"></a> Join Us</button>
+    <!--
         <div id="example">
 
         </div>
+        -->
         <script src="../js/app.js"></script>
     </body>
 </html>
