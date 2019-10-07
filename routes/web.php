@@ -22,3 +22,9 @@ Route::get('/form',
     'uses' => 'FromController@index',
     'as' => 'form'
 ]);
+
+Route::post('/insert',
+[
+    'uses' => 'FromController@store',
+    'as' => 'insert'
+]);

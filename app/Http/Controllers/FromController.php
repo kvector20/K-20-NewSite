@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Form;
+use Session;
 class FromController extends Controller
 {
     /**
@@ -13,7 +14,7 @@ class FromController extends Controller
      */
     public function index()
     {
-        //
+        return view('form');
     }
 
     /**
@@ -23,7 +24,7 @@ class FromController extends Controller
      */
     public function create()
     {
-        return view('form');
+        //
     }
 
     /**
@@ -34,7 +35,21 @@ class FromController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new Form();
+        $data->name = $request->name;
+        $data->mail = $request->mail;
+        $data->phone = $request->phone;
+        $data->university = $request->uni;
+        $data->faculty = $request->faculty;
+        $data->AcYear = $request->ac[0];
+        $data->first = $request->first[0];
+        $data->second = $request->second[0];
+
+        $data->save();
+        Session::flash('ok','Registration Is Completed !');
+
+
+        return redirect()->back();
     }
 
     /**

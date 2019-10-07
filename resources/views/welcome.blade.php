@@ -16,7 +16,7 @@
 
 
     <h1>We Coming Soon</h1>
-    <button class="btn btn-danger"> <a href="route('form')"></a> Join Us</button>
+    <button class="btn btn-danger"> <a href="{{route('form')}}">join us</a></button>
     <!--
         <div id="example">
 

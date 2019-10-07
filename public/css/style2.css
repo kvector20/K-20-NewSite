@@ -1,0 +1,104 @@
+.cover
+{
+    width: 100%;
+    height: 650px;
+    background-size: 100% 100%;
+    background-image: url('../img/Join_US.webp');
+    background-attachment: scroll;
+    color:#eff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+select
+{
+    text-transform: capitalize;
+    border-top:none !important;
+    border-right:none !important;
+    border-left:none !important;
+    margin-bottom: 25px;
+
+}
+select:focus
+{
+    box-shadow: 0 0 0 0.2rem rgba(255,53,71,.3) !important;
+    border-color:rgba(255,53,71,.3) !important;
+}
+select option:hover
+{
+    color: red !important;
+}
+.cover h1
+{
+    font-weight: bold;
+    font-size: 50px;
+}
+.cover h1 span
+{
+    color: red;
+}
+.cover a
+{
+    opacity: .9;
+}
+.joinus
+{
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+.color
+{
+    background-color: #ff3547;
+}
+strong
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.form-control:focus
+{
+    box-shadow: 0 1px 0 0 #FF5050 !important;
+    border-bottom: 1px solid #FF5050 !important;
+}
+.dropdown-content
+{
+    z-index: 1021 !important;
+    background-color: white !important;
+}
+.active
+{
+    color: #FF5050 !important;
+}
+ul
+{
+    z-index: 5000 !important;
+    /*top:-477px !important;*/
+}
+
+
+@media(max-width:750px)
+{
+    .cover
+    {
+        height: 300px;
+    }
+
+}
+@media(max-width:290px)
+{
+    .cover
+    {
+        height: 200px;
+    }
+    /*
+    ul
+    {
+        top:-200px !important;
+    }
+    */
+}
+h3
+{
+    font-weight: bold;
+}
