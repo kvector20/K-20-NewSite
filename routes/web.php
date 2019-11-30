@@ -28,3 +28,10 @@ Route::post('/insert',
     'uses' => 'FromController@store',
     'as' => 'insert'
 ]);
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/EventRegisteration.php',function()
+{
+    return redirect('https://plus6500.kvectorfoundation.com/');
+});
