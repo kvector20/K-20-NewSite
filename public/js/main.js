@@ -31,3 +31,8 @@ input[4].onchange = function()
         input[4].value = 'http links not allowed';
     }
 }
+$('#summernote').summernote({
+    placeholder: 'Hello stand alone ui',
+    tabsize: 2,
+    height: 100
+});

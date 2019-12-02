@@ -35,3 +35,14 @@ Route::get('/EventRegisteration.php',function()
 {
     return redirect('https://plus6500.kvectorfoundation.com/');
 });
+
+Route::get('/home/magazine',
+[
+    'uses' => 'MagazineController@index',
+    'as' => 'CreateMagazine'
+]);
+Route::post('/home/magazine/save',
+[
+    'uses' => 'MagazineController@store',
+    'as' => 'StoreMagazine'
+]);

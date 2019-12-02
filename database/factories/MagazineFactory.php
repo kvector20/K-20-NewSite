@@ -10,6 +10,7 @@ $factory->define(Magazine::class, function (Faker $faker) {
         'title' => $faker->text(50),
         'body' => $faker->text(450),
         'author' => $faker->text(10),
+        'img' => $faker->text(15),
         'collection_name' => $faker->text(10),
         'collection_month' => $faker->text(5)
     ];

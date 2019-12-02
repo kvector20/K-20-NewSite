@@ -8,16 +8,19 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="stylesheet" href="{{asset('css/mdb.min.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.js"></script>
+
 </head>
 <body>
     <div id="app">
@@ -76,8 +79,32 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <a href="{{route('CreateMagazine')}}">Magazine</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="">Category</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-8">
+                        @yield('content')
+                    </div>
+                </div>
+            </div>
+            
         </main>
     </div>
+
+
+    <script src="{{asset('js/jquery-3.4.1.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('js/mdb.min.js')}}"></script>
+    <script src="{{asset('js/home.js')}}"></script>
+    <script src="{{asset('js/main.js')}}"></script>
 </body>
 </html>

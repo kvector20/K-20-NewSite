@@ -19,6 +19,7 @@ class MagazineTable extends Migration
             $table->string('title');
             $table->text('body');
             $table->string('author');
+            $table->string('img');
             $table->integer('views')->default('0');
             $table->boolean('published')->default('0');
             $table->string('collection_name');
