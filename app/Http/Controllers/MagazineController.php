@@ -11,10 +11,12 @@ class MagazineController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    /*
     public function __construct()
     {
         $this->middleware('auth');
     }
+    */
 
     public function index()
     {
@@ -59,10 +61,12 @@ class MagazineController extends Controller
             'title' => $request->title,
             'body' => $request->body,
             'author' => $request->author,
-            'img' => '/uploads/magazine'. $new_img,
+            'img' => '/uploads/magazine/'. $new_img,
             'collection_name' => $request->collection_name,
             'collection_month' => $request->collection_month
         ]);
+
+        return redirect()->back()->with('ok','Topic Added Ok');
     }
 
     /**
@@ -73,7 +77,12 @@ class MagazineController extends Controller
      */
     public function show($id)
     {
-        //
+        $magazine = Magazine::all();
+
+        $topic = Magazine::findOrfail($id);
+
+        return view('Users.Magazine.Topic')->with('magazines',$magazine)
+        ->with('topic',$topic);
     }
 
     /**
@@ -108,5 +117,11 @@ class MagazineController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function user_view()
+    {
+        $magazine = Magazine::all();
+        return view('Users.Magazine.Magazine')->with('magazines',$magazine);
     }
 }

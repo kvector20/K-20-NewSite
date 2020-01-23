@@ -12,8 +12,12 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    //return view('welcome');
+    return redirect()->route('userView');
 });
+
+Route::get('/participants','FromController@thirdRec');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -40,9 +44,20 @@ Route::get('/home/magazine',
 [
     'uses' => 'MagazineController@index',
     'as' => 'CreateMagazine'
-]);
+])->middleware('auth');
 Route::post('/home/magazine/save',
 [
     'uses' => 'MagazineController@store',
     'as' => 'StoreMagazine'
+])->middleware('auth');
+
+Route::get('/k20-magazine',
+[
+    'uses' => 'MagazineController@user_view',
+    'as' => 'userView'
+]);
+Route::get('/topic/{id}',
+[
+    'uses'=> 'MagazineController@show',
+    'as' => 'topic'
 ]);

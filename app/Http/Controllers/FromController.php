@@ -96,4 +96,8 @@ class FromController extends Controller
     {
         //
     }
+    public function thirdRec()
+    {
+        return view('thirdRec');
+    }
 }
