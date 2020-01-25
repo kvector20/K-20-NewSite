@@ -12,8 +12,8 @@
 */
 
 Route::get('/', function () {
-    //return view('welcome');
-    return redirect()->route('userView');
+    return view('main/main');
+    //return redirect()->route('userView');
 });
 
 Route::get('/participants','FromController@thirdRec');

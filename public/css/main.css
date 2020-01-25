@@ -1,0 +1,249 @@
+.grid
+{
+    height: 700px;
+    background-image: linear-gradient(to right top, #ef5350 , #212121);
+    padding: 0 !important;
+    position: relative;
+}
+.container,.container-fluid
+{
+    text-transform: capitalize !important;
+    font-family: 'Poppins', sans-serif !important;
+
+}
+/*animation*/
+
+.wave-2
+{
+    background-image:url('../img/wave.png');
+    width: 100%;
+    height: 142px;
+    animation:animate 10s linear infinite;
+    position: absolute;
+    bottom: 0;
+}
+.wave-2:before
+{
+    content: '';
+    background-image:url('../img/wave.png');
+    width: 100%;
+    height: 142px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation:animate-r 10s linear infinite;
+    opacity: .5;
+
+}
+.wave-2:after
+{
+    content: '';
+    background-image:url('../img/wave.png');
+    width: 100%;
+    height: 142px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation-delay: -5s;
+    animation:animate 20s linear infinite;
+    opacity: .7;
+
+}
+@keyframes animate
+{
+    0%
+    {
+        background-position: 0;
+    }
+    100%
+    {
+        background-position: 1360px;
+    }
+}
+@keyframes animate-r
+{
+    0%
+    {
+        background-position: 1360px;
+    }
+    100%
+    {
+        background-position: 0;
+    }
+}
+.wave
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.wave img
+{
+    width: 100%;
+}
+body
+{
+    height: 3000px;
+    font-family: 'Roboto', sans-serif;
+
+}
+/*NavBar*/
+small
+{
+    font-size: 60%;
+}
+
+.mdb-skin .navbar .navbar-nav .nav-item .dropdown-menu a:active, .mdb-skin .navbar .navbar-nav .nav-item .dropdown-menu a:focus, .mdb-skin .navbar .navbar-nav .nav-item .dropdown-menu a:hover
+{
+    background-color: #333;
+}
+
+
+
+@media (max-height: 992px)
+{
+    .side-nav .logo-wrapper, .side-nav .logo-wrapper a
+    {
+        height: 100%;
+    }
+}
+.mdb-skin .side-nav .collapsible li .collapsible-header.active, .mdb-skin .side-nav .collapsible li .collapsible-header:hover
+{
+    background-color: #F75858;
+}
+.mdb-skin .side-nav .collapsible li a:not(.collapsible-header).active, .mdb-skin .side-nav .collapsible li a:not(.collapsible-header):active, .mdb-skin .side-nav .collapsible li a:not(.collapsible-header):hover
+{
+    color: #F75858 !important;
+}
+.mdb-skin input[type=email]:focus:not([readonly]), .mdb-skin input[type=text]:focus:not([readonly]), .mdb-skin input[type=password]:focus:not([readonly]), .mdb-skin input[type=number]:focus:not([readonly]), .mdb-skin textarea.md-textarea:focus:not([readonly])
+{
+    border-color: #F75858;
+}
+/*
+@media(min-width:600px)
+{
+    .float-left
+    {
+        display: none;
+    }
+}
+*/
+@media(max-width:600px)
+{
+    .navbar-nav
+    {
+        display: none;
+    }
+}
+.sn-bg-4
+{
+    background-image: url('../img/ry.jpg');
+}
+.navbar-dark,.bg-dark
+{
+    background-color: transparent !important;
+}
+.top-nav-collapse
+{
+    background-color: black !important;
+}
+/* NabBar */
+
+/*Header Main*/
+.main
+{
+    background-image:linear-gradient(to right bottom,rgba(0,0,0,.4),rgba(0,0,0,.8)),url('../img/intro2.jpg');
+    background-size: 100% 100%;
+    height: 750px;
+    background-attachment: fixed;
+    clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+    color: white;
+    position: relative;
+    z-index: 100;
+    
+
+}
+.main .intro
+{
+    width: 100%;
+    height: auto;
+    padding-top: 150px;
+
+}
+.intro h1
+{
+    text-transform: capitalize;
+    color: #e1e1e1;
+}
+.intro h2
+{
+    text-transform: capitalize;
+    color: #e1e1e1;
+}
+
+.lead
+{
+    text-transform: capitalize;
+    color: #e1e1e1;
+}
+.btn-danger
+{
+    background-color: #F75858;
+}
+/*Header Main*/
+
+/*Vision Mission*/
+.about
+{
+    background-color: #f7f7f7;
+    /*background-color: dodgerblue;*/
+    clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+    height: 1200px;
+    position: relative;
+    z-index: 99;
+}
+
+@media(max-width:992px)
+{
+    .about
+    {
+        height: 1800px;
+    }
+    .projects
+    {
+        margin-top: 400px;
+    }
+}
+.vision img
+{
+    max-width: 100%;
+}
+.about-title h1
+{
+    padding-bottom: 50px;
+}
+.card-img-top
+{
+    height: 360px;
+}
+.fixed-sn main, .hidden-sn main
+{
+    margin-top: -300px;
+}
+.about
+{
+    padding-top: 200px;
+}
+/*Vision Mission*/
+
+/*projects*/
+
+.projects
+{
+    background-color: dodgerblue;
+    margin-top: -300px;
+    padding-top: 300px;
+}
+
+
+/*projects*/

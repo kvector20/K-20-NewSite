@@ -12,10 +12,12 @@
         <link rel="stylesheet" href="{{asset('css/home.css')}}">
         <!-- Styles -->
     </head>
-    <body style='height:100vh'>
+    <body>
+    <!--
         <div id="example" class='h-100'>
 
         </div>
+        -->
         <script src="../js/app.js"></script>
         <script src="{{asset('js/home.js')}}"></script>
     </body>
