@@ -68,3 +68,8 @@ Route::get('/career7',function()
 {
     return view('carrer7');
 }); 
+Route::post('/career7/insert',
+[
+    'uses' => 'CareerController@store',
+    'as' => 'c7'
+]); 
