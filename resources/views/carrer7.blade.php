@@ -126,9 +126,13 @@
     <div class="step-new-content">
       <div class="row">
         <div class="md-form col-12 ml-auto">
-          <input name='session' id="session-linear" type="text" class="form-control validate" required>
-          <label for="session-linear">Your Session</label>
-        </div>
+        <select class="mdb-select md-form" name='session[]'>
+        <option value="" disabled selected>Choose Your Session</option>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+      </select>
+      </div>
       </div>
       <div class="step-actions">
         <button class="waves-effect waves-dark btn btn-sm btn-primary next-step">CONTINUE</button>

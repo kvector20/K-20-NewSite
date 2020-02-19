@@ -58,7 +58,7 @@ class CareerController extends Controller
         $data->NID = $request->NID;
         $data->department = $request->department;
         $data->uni = $request->uni;
-        $data->session = $request->session;
+        $data->session = $request->session[0];
         $data->save();
         
         return redirect()->route('c7done');

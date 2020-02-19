@@ -30,6 +30,10 @@
     justify-content:center;
     align-items:center;
   }
+  .text-center h1
+  {
+    padding-top: 25px;
+  }
   @media(max-width:500px)
   {
     .cover
