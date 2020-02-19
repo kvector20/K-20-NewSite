@@ -61,3 +61,10 @@ Route::get('/topic/{id}',
     'uses'=> 'MagazineController@show',
     'as' => 'topic'
 ]);
+
+
+
+Route::get('/career7',function()
+{
+    return view('carrer7');
+}); 
