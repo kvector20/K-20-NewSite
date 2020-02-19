@@ -18,6 +18,30 @@
     <link rel="stylesheet" href="{{asset('css/steppers.css')}}">
     <!-- Styles -->
     <link rel="stylesheet" href="{{asset('libraries/fontawesome/css/all.css')}}">
+    <style>
+  .cover
+  {
+    height:100vh;
+    width:100%;
+    background-image:linear-gradient(to right bottom,rgba(0,0,0,.8),rgba(0,0,0,.5)),url('../img/c7.webp');
+    background-size:100% 100%;
+    color: whitesmoke;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  @media(max-width:500px)
+  {
+    .cover
+    {
+      height:75vh;
+    }
+  }
+  ul.stepper
+  {
+    margin:0
+  }
+</style>
 
 </head>
 <body>

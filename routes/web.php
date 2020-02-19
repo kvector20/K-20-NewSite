@@ -72,4 +72,10 @@ Route::post('/career7/insert',
 [
     'uses' => 'CareerController@store',
     'as' => 'c7'
-]); 
+]);
+
+Route::get('/career7/done',
+[
+    'uses' => 'CareerController@index',
+    'as' => 'c7done'
+]);

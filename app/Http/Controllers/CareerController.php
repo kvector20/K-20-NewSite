@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Career7;
+use Session;
 class CareerController extends Controller
 {
     /**
@@ -13,7 +14,7 @@ class CareerController extends Controller
      */
     public function index()
     {
-        //
+        return view('done');
     }
 
     /**
@@ -46,6 +47,10 @@ class CareerController extends Controller
             'workshop' => 'required'
         ]);
 */
+        $this->validate($request,[
+            'phone' => 'required|unique:career7',
+            'NID' => 'required|unique:career7'
+        ]);
         $data->name = $request->name;
         $data->mail = $request->email;
         $data->phone = $request->phone;
@@ -54,11 +59,11 @@ class CareerController extends Controller
         $data->department = $request->department;
         $data->uni = $request->uni;
         $data->session = $request->session;
-
         $data->save();
-
-        //return redirect()->route('done');
-
+        
+        return redirect()->route('c7done');
+        
+        
     }
 
     /**
